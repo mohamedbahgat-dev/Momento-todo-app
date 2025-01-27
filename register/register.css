@@ -23,7 +23,7 @@
   width: 700px;
   height: 650px;
   margin-right: 100px;
-  margin-left: 5ch0px;
+
   margin-top: 50px;
   border-radius: 20px;
 }
@@ -124,4 +124,59 @@
 .token-alert {
   color: red;
   font-family: sans-serif;
+}
+
+/* styling for mobile and small screens */
+@media only screen and (max-width: 600px) {
+  .zigzag-left img {
+    display: none;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(251, 211, 51, 0.621);
+    width: 500px;
+    height: 630px;
+    margin-top: 150px;
+    border-radius: 20px;
+  }
+
+  .login-form form {
+    width: 400px;
+  }
+
+  .login-form form input {
+    width: 300px;
+  }
+
+  .login-form img {
+    width: 200px;
+    margin-top: 100px;
+  }
+
+  .logo {
+    display: block;
+    position: absolute;
+    top: 165px;
+    left: 190px;
+    width: 100px;
+  }
+
+  .logo img {
+    width: 200px;
+  }
+
+  .slogan {
+    position: absolute;
+
+    display: inline-block;
+    background-color: #6c63ff;
+    text-align: center;
+    width: 100%;
+    margin-top: 0px;
+    padding: 15px 0;
+    color: white;
+    font-family: "poppins";
+  }
 }

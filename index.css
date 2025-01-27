@@ -209,6 +209,7 @@
     width: 300px;
     align-items: center;
     z-index: 10;
+    margin-top: 40px;
   }
 
   .logo img {
