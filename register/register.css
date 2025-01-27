@@ -136,7 +136,7 @@
     flex-direction: column;
     background-color: rgba(251, 211, 51, 0.621);
     width: 500px;
-    height: 630px;
+    height: 650px;
     margin-top: 150px;
     margin-left: 20px;
     border-radius: 20px;
@@ -151,16 +151,16 @@
   }
 
   .login-form img {
-    width: 200px;
+    width: 250px;
     margin-top: 100px;
   }
 
   .logo {
-    display: block;
+    top: 170px;
+    width: 100%;
+    left: 0;
+    /* background-color: violet; */
     position: absolute;
-    top: 165px;
-    left: 135px;
-    width: 100px;
     text-align: center;
   }
 
@@ -170,13 +170,12 @@
 
   .slogan {
     position: absolute;
-    width: 100%;
-    display: inline-block;
-    background-color: #6c63ff;
     text-align: center;
+    width: 100%;
+    padding: 10px 0;
     margin-top: 0px;
-    padding: 15px 0;
+    background-color: #6c63ff;
+    margin-left: 0px;
     color: white;
-    font-family: "poppins";
   }
 }
