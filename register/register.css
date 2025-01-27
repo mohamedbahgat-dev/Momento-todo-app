@@ -22,7 +22,7 @@
   background-color: rgba(255, 213, 25, 0.3);
   width: 700px;
   height: 650px;
-  margin-right: 70px;
+  margin-right: 60px;
   margin-top: 50px;
   border-radius: 20px;
 }
@@ -137,8 +137,8 @@
     background-color: rgba(251, 211, 51, 0.621);
     width: 500px;
     height: 650px;
-    margin-top: 150px;
-    margin-left: 20px;
+    margin-top: 120px;
+    margin-left: 30px;
     border-radius: 20px;
   }
 
