@@ -147,16 +147,17 @@
   }
 
   .login-form form input {
-    width: 250px;
+    width: 260px;
+    height: 25px;
   }
 
   .login-form img {
-    width: 250px;
-    margin-top: 100px;
+    width: 200px;
+    margin-top: 80px;
   }
 
   .logo {
-    top: 170px;
+    top: 150px;
     width: 100%;
     left: 0;
     /* background-color: violet; */
@@ -177,5 +178,13 @@
     background-color: #6c63ff;
     margin-left: 0px;
     color: white;
+  }
+
+  .slogan h2 {
+    font-size: 18px;
+  }
+
+  .slogan p {
+    font-size: small;
   }
 }
