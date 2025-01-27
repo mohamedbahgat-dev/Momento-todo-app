@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../rebase.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <title>Momento - Home</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="home.html"><img id="logo" src="../assets/momento-yellow.png" alt="logo" /></a>
+            <ul class="pages">
+                <li><a href="home.html">Daily</a></li>
+                <li><a href="../weekly/weekly.html">Weekly</a></li>
+                <li><a href="../monthly/monthly.html">Monthly</a></li>
+                <li><a href="../yearly/yearly.html">Yearly</a></li>
+            </ul>
+            <div class="user-icon">
+                <span id="username">Name</span>
+                <a href="../register/register.html"><img id="person-icon" src="../assets/user-img.png" alt="user image" /></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="page-header">
+            <h3 id="greeting-msg">Welcome, Mohamed</h3>
+            <div class="clock">
+                <span id="day">Sunday</span>
+                <span id="date">21-01-2025</span>
+                <span id="clock">08:50:30 AM</span>
+                
+            </div>
+        </div>
+        <h3 class="container-title">Tasks list</h3>
+
+        <!-- daily tasks --start-- -->
+         <div class="daily-tasks">
+            <div class="tasks-container">
+                <div class="task-container-headers">
+                    <h3>Daily tasks</h3>
+                    <svg class="add-tasks" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-6">
+                        <path fill-rule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+            
+                <!-- task input modal --start-- -->
+                <div class="modal-container">
+                    <div class="addtask-modal">
+                        <div class="modal-header">
+                            <h2>Enter your task details</h2>
+                            <span class="close">&times;</span>
+                        </div>
+                        <form class="modal-form">
+                            <label for="task">Task title</label>
+                            <input type="text" id="task" name="task" required placeholder="Enter your task">
+                            <div id="time">
+                                <label for="start-time">Start Time</label>
+                                <input type="time" id="start-time" name="start-time" min="01:00" max="23:59" required>
+                                <label for="end-time">End Time</label>
+                                <input type="time" id="end-time" name="end-time" min="01:00" max="23:59" required>
+                            </div>
+                            <label for="note">Notes</label>
+                            <input type="text" id="note" name="note" required placeholder="">
+            
+                            <button class="add" type="submit">Add</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- task input modal --end-- -->
+            
+                <div class="tasks-headers">
+                    <h4>Task</h4>
+                    <h4>Time</h4>
+                    <h4>Notes</h4>
+                </div>
+                <ul class="tasks">
+            
+                </ul>
+            </div>
+         </div>         
+        <!-- daily tasks --end-- -->
+    </main>
+    <script src="home.js"></script>
+</body>
+</html>

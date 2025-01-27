@@ -1,0 +1,127 @@
+.login-container {
+  display: flex;
+}
+
+.zigzag-left {
+  width: 60%;
+  margin-right: 0;
+}
+
+.zigzag-left img {
+  width: 800px;
+  height: 750px;
+  margin-left: -5px;
+  margin-bottom: -5px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 213, 25, 0.3);
+  width: 700px;
+  height: 650px;
+  margin-right: 100px;
+  margin-left: 5ch0px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.login-form img {
+  width: 250px;
+  margin-top: 40px;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form form input {
+  text-align: start;
+  width: 350px;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  background-color: rgb(246, 243, 243);
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px gainsboro;
+}
+
+::placeholder {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.login-form form button {
+  font-family: "poppins";
+  font-size: large;
+  background-color: #6c63ff;
+  border-style: none;
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+  width: 200px;
+  margin-top: 10px;
+  box-shadow: 2px 3px 5px rgb(173, 172, 172);
+}
+
+.login-form form button:hover {
+  cursor: pointer;
+}
+
+.login-form form p {
+  font-family: "poppins";
+  font-size: small;
+}
+
+.login-form form span {
+  color: red;
+  margin-left: 4px;
+  font-size: 14px;
+}
+
+.slogan {
+  position: absolute;
+  text-align: center;
+  width: 40%;
+  margin-left: 20px;
+  margin-top: 40px;
+  color: rgb(4, 8, 49);
+  font-family: "poppins";
+}
+
+.slogan h2 {
+  font-size: x-large;
+  margin-bottom: 15px;
+}
+
+.logo {
+  position: absolute;
+  width: 250px;
+  bottom: 10px;
+  left: 140px;
+}
+
+.logo img {
+  width: 250px;
+}
+
+#user-validate,
+#email-validate,
+#password-validate {
+  display: none;
+  width: 350px;
+  text-align: start;
+  font-family: sans-serif;
+}
+
+.token-alert {
+  color: red;
+  font-family: sans-serif;
+}

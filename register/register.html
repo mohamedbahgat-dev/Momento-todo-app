@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../rebase.css">
+    <link rel="stylesheet" type="text/css" href="register.css">   
+    
+    <title>Momento - Register</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="slogan">
+            <h2>Welcome onboard</h2>
+            <p>Let’s help you get your life more organized.</p>
+        </div>
+        <div class="logo">
+            <img src="../assets/Momento-white.png" />
+        </div>
+        <div class="zigzag-left">
+            <img src="../assets/zigzag-left.png" />
+        </div>
+        <div class="login-form">
+            <img src="../assets/sign-up.svg" />
+            <form class="registration">   
+                <input type="text" name="name" id="name" required placeholder="Username">
+                <span id="user-validate"></span>
+                <input type="email" name="email" id="email" required placeholder="example@gmail.com">
+                <span id="email-validate"></span>
+                <input type="password" name="password" id="password" minlength="8" required placeholder="Password">
+                <input type="password" name="confirm-password" id="confirm-password" minlength="8" required placeholder="Confirm Password">
+                <span id="password-validate"></span>
+
+                <button type="submit">Register</button>
+                <p>Already have an account
+                    <a class="login-btn" href="../login/login.html"><span>Sign In</span></a>
+                </p>
+                <div class="token-alert">
+                
+                </div>
+            </form>
+            
+        </div>
+    </div> 
+    <script src="register.js"></script>
+</body>
+</html> 

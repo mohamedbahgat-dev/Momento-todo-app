@@ -1,0 +1,17 @@
+#year {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "poppins";
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+}
+
+[for="year"] {
+  margin-top: 10px;
+}
+
+[for="note"] {
+  margin-top: 5px;
+}

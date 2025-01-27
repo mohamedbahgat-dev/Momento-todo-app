@@ -1,0 +1,14 @@
+#week {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "poppins";
+  margin: 10px 2px;
+}
+
+#week select,
+#week input {
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+}
