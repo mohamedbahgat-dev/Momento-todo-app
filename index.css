@@ -40,18 +40,19 @@
   color: white;
 }
 
-.started-btn button {
+.started-btn a {
+  display: inline-block;
   position: relative;
   font-family: "poppins";
   font-size: large;
   background-color: #6c63ff;
   border-style: none;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px 10px;
   text-decoration: none;
+  margin-top: 30px;
   color: white;
   width: 150px;
-  margin-top: 30px;
   z-index: 10;
   box-shadow: 2px 2px 5px rgb(162, 162, 162);
 }
@@ -60,7 +61,7 @@
   text-decoration: none !important;
 }
 
-.started-btn button:hover {
+.started-btn a:hover {
   cursor: pointer;
 }
 
@@ -199,5 +200,27 @@
     transform: translateY(-1000px) rotate(720deg);
     opacity: 0.3;
     border-radius: 80%;
+  }
+}
+
+/* styling for mobile and small screens */
+@media only screen and (max-width: 600px) {
+  .sticker img {
+    width: 300px;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .logo img {
+    width: 140px;
+    margin-top: 10px;
+  }
+
+  .slogan h2 {
+    font-size: large;
+  }
+
+  .slogan p {
+    font-size: x-small;
   }
 }
