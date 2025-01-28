@@ -126,10 +126,17 @@
     display: none;
   }
 
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
   .login-form {
-    margin-left: 15px;
     height: 550px;
     margin-top: 100px;
+    margin-left: 0;
     width: 350px;
   }
 
@@ -177,19 +184,135 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .zigzag-right {
+    display: block;
+  }
+
+  .zigzag-right img {
+    width: 500px;
+    height: 750px;
+  }
+
+  .login-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .login-form {
+    height: 550px;
+    margin-top: 100px;
+    width: 350px;
+    margin-left: 50px;
+    background-color: transparent;
+  }
+
+  .login-form img {
+    margin-top: 100px;
+  }
+
+  .login-form form input {
+    width: 280px;
+  }
+
+  .slogan {
+    left: 0;
+    top: 50px;
+    margin-right: 0;
+    text-align: center;
+    width: 480px;
+    height: 70px;
+
+    text-align: center;
+  }
+
+  .slogan h2 {
+    font-size: x-large;
+    font-weight: normal;
+    margin-bottom: -5px;
+  }
+
+  .slogan p {
+    font-size: small;
+  }
+
+  .logo {
+    top: 0;
+    left: 250px;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 200px;
+    margin-top: 20px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  ...;
+  .zigzag-right {
+    display: block;
+  }
+
+  .zigzag-right img {
+    width: 650px;
+    height: 750px;
+  }
+
+  .logo {
+    top: 0;
+    left: 250px;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 200px;
+    margin-top: 20px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  ...;
+  .logo {
+    left: 250px;
+  }
+
+  .zigzag-right {
+    width: 750px;
+  }
+
+  .login-form {
+    background-color: rgba(255, 213, 25, 0.3);
+    margin-left: 100px;
+  }
+
+  .login-form img {
+    margin-top: 60px;
+  }
+
+  .slogan {
+    top: 10px;
+    left: 40px;
+  }
+
+  .logo img {
+    width: 250px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  ...;
+  .logo {
+    left: 300px;
+  }
+  .login-form {
+    margin-left: 150px;
+  }
+  .slogan {
+    left: 90px;
+  }
 }
