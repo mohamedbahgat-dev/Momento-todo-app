@@ -119,3 +119,77 @@
   color: red;
   font-family: sans-serif;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .zigzag-right {
+    display: none;
+  }
+
+  .login-form {
+    margin-left: 15px;
+    height: 550px;
+    margin-top: 100px;
+    width: 350px;
+  }
+
+  .login-form img {
+    margin-top: 100px;
+  }
+
+  .login-form form input {
+    width: 280px;
+  }
+
+  .slogan {
+    right: 0;
+    top: 110px;
+    margin-right: 0;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+  }
+
+  .slogan h2 {
+    font-size: large;
+    font-weight: normal;
+    margin-bottom: -5px;
+  }
+
+  .slogan p {
+    font-size: x-small;
+  }
+
+  .logo {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    background-color: rgba(255, 213, 25, 0.764);
+  }
+
+  .logo img {
+    width: 150px;
+    margin-top: 14px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  ...;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  ...;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  ...;
+}
