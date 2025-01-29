@@ -458,6 +458,19 @@
     left: 25px;
     color: red;
   }
+
+  .addtask-modal {
+    margin: 50% 20px;
+    background-color: rgb(255, 240, 181);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .addtask-modal label {
+    text-align: start;
+    width: fit-content;
+    margin-left: 10px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
