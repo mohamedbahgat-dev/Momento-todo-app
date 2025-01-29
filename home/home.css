@@ -626,7 +626,7 @@
 
   .time {
     position: relative;
-    top: 10px;
+    top: 0px;
     right: 200px;
     text-align: center;
     line-height: 1.5;
@@ -636,15 +636,15 @@
     width: 300px;
     position: relative;
     text-align: start;
-    top: -13px;
-    left: 0px;
+    top: 0px;
+    left: 1px;
     line-height: 1.5;
   }
 
   .delete {
     background-color: #a1a9f1;
     color: white;
-    top: 10px;
+    top: 15px;
     right: 5px;
     margin-right: 20px;
     padding: 5px 15px;
@@ -660,7 +660,7 @@
     margin-bottom: 10px;
     margin-left: -8px;
     border-radius: 15px;
-    padding: 5px 15px;
+    padding: 20px 15px;
   }
 
   .task-item:nth-child(even) {
