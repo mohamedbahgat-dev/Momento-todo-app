@@ -438,15 +438,13 @@
   .delete {
     position: absolute;
     top: 3px;
-    right: -15px;
+    right: 0px;
   }
 
   .time {
-    align-self: first baseline;
+    position: relative;
+    left: -15px;
     width: fit-content;
-    position: absolute;
-    top: 3px;
-    right: 100px;
     color: #2f3a9f;
   }
 
