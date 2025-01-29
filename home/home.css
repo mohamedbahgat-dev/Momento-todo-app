@@ -184,8 +184,8 @@
 
 .task-title input::before {
   content: "";
-  width: 13px;
-  height: 13px;
+  width: 14px;
+  height: 14px;
   position: absolute;
   background-color: rgba(161, 169, 241, 0.5);
 }
