@@ -56,6 +56,29 @@ const CreateTaskElement = (title, taskTime, taskNote )=> {
 
 }
 
+// // create event to show hamburger menu in mobile design
+const menuIcon = document.querySelector('.menu-icon')
+const hamburgerMenu = document.querySelector('.hamburger-menu')
+const pageMain  = document.querySelector('main')
+menuIcon.addEventListener('click', function(e){
+    hamburgerMenu.style.display = 'flex'
+    menuIcon.style.rotate = '90deg'
+        
+})
+
+pageMain.addEventListener('click', function(e){
+    e.stopPropagation()
+    hamburgerMenu.style.display = 'none'  
+    menuIcon.style.rotate = '180deg'  
+})
+
+const menuClose = document.querySelector('.menu-close')
+menuClose.addEventListener('click', function(){
+    hamburgerMenu.style.display = 'none'
+    menuIcon.style.rotate = '180deg'
+   
+})
+
 
 // load and display user stored tasks
 if(localStorage.getItem('monthlyTasks') !== null){
@@ -165,11 +188,11 @@ setInterval(updateClock , 1000)
 // 
 
 
+// change color of active page link
 const currentLink = window.location.href
-const pagesLinks = document.querySelectorAll('.pages a')
+const pagesLinks = document.querySelectorAll('.navbar ul li a')
 for(link of pagesLinks) {
     if(link.href === currentLink){
         link.style.color = 'red'
     }
 }
-

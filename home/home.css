@@ -165,9 +165,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
-  margin-left: -8px;
   border-radius: 15px;
-  padding: 5px 15px;
+  padding: 5px 5px 5px 10px;
 }
 
 .task-title {
@@ -227,7 +226,6 @@
 .task-item:nth-child(even) {
   background-color: #fffef1;
   height: auto;
-  width: auto;
 }
 
 .new-list {
