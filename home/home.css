@@ -8,6 +8,11 @@
   border-radius: 20px;
 }
 
+.menu-icon {
+  display: none;
+  width: 20px;
+}
+
 .user-icon {
   display: flex;
   align-items: center;
@@ -19,13 +24,13 @@
   font-weight: bold;
 }
 
-.pages {
+.main-menu {
   display: flex;
   font-family: sans-serif;
   font-weight: bold;
 }
 
-.pages li {
+.main-menu li {
   margin: 8px;
   background-color: white;
   padding: 7px 12px;
@@ -33,13 +38,13 @@
   box-shadow: 0 2px 3px 0 rgba(107, 106, 106, 0.5);
 }
 
-.pages li a {
+.main-menu li a {
   color: rgb(18, 152, 255);
   text-decoration: none;
 }
 
-.pages li a:active {
-  color: red !important;
+.hamburger-menu {
+  display: none;
 }
 
 #logo {
@@ -207,11 +212,6 @@
   line-height: 1.5;
 }
 
-.note-bubble {
-  display: none;
-  width: 30px;
-}
-
 .delete {
   background-color: #a1a9f1;
   color: white;
@@ -227,6 +227,7 @@
 .task-item:nth-child(even) {
   background-color: #fffef1;
   height: auto;
+  width: auto;
 }
 
 .new-list {
@@ -358,9 +359,71 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .pages {
+  .menu-icon {
+    display: block;
+    position: absolute;
+    color: #2f3a9f;
+    top: 20px;
+    left: 20px;
+  }
+
+  .menu-icon:hover {
+    cursor: pointer;
+  }
+
+  #logo {
+    height: 30px;
+    width: 80px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    margin: 0;
+  }
+
+  .hamburger-menu {
     display: none;
     flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    width: 140px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    background-color: #a1a9f1;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+
+  .hamburger-menu li {
+    margin: 8px;
+    background-color: white;
+    padding: 7px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 3px 0 rgba(107, 106, 106, 0.5);
+  }
+
+  .hamburger-menu li a {
+    color: rgb(18, 152, 255);
+    text-decoration: none;
+  }
+
+  .main-menu {
+    display: none;
+  }
+
+  .menu-close {
+    position: relative;
+    margin-top: 8px;
+    left: 120px;
+    top: 2px;
+  }
+
+  .menu-close:hover {
+    cursor: pointer;
+  }
+
+  .menu-close {
+    display: block;
   }
 
   .navbar {
@@ -373,10 +436,6 @@
     width: 100%;
     border-radius: 0;
     height: 150px;
-  }
-
-  #logo {
-    display: none;
   }
 
   .user-icon {
@@ -403,7 +462,6 @@
 
   .container-title {
     text-align: center;
-
     margin: 0 0 20px 20px;
     padding: 10px 20px;
     border-radius: 20px;
@@ -442,9 +500,12 @@
   }
 
   .time {
+    align-self: first baseline;
     position: relative;
     left: -15px;
-    width: fit-content;
+    width: 200px;
+    margin-right: 10px;
+    text-align: start;
     color: #2f3a9f;
   }
 
@@ -481,10 +542,6 @@
     margin-left: 10px;
   }
 
-  .pages {
-    margin-right: 10px;
-  }
-
   .clock {
     margin-right: -25px;
   }
@@ -500,6 +557,8 @@
   .task-item {
     margin-top: 20px;
     width: 96%;
+    height: 50px;
+
     flex-wrap: wrap;
     gap: 0px;
     position: relative;
@@ -517,32 +576,139 @@
   }
 
   .time {
+    color: #2f3a9f;
     align-self: first baseline;
     width: fit-content;
     position: absolute;
     top: 3px;
-    right: 110px;
+    right: 150px;
   }
 
   .note {
     text-align: start;
-    width: 300px;
+    width: 350px;
     margin-left: 25px;
     color: red;
+  }
+
+  .addtask-modal {
+    margin: 10% 20px;
+    background-color: rgb(255, 240, 181);
+    border-radius: 20px;
+    overflow: hidden;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  ...;
+  .container-title {
+    text-align: center;
+    margin: 0 0 20px 50px;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+
+  .user-icon {
+    display: flex;
+    align-items: center;
+    margin-right: -20px;
+  }
+
+  #logo {
+    margin-left: 30px;
+  }
+
+  .task-title {
+    display: flex;
+    align-items: first baseline;
+    width: 260px;
+    margin-left: 0px;
+    line-height: 1.3;
+  }
+
+  .time {
+    position: relative;
+    top: 10px;
+    right: 50px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .note {
+    width: 300px;
+    position: relative;
+    text-align: start;
+    top: -13px;
+    left: -70px;
+    line-height: 1.5;
+  }
+
+  .delete {
+    background-color: #a1a9f1;
+    color: white;
+    top: 10px;
+    right: 5px;
+    margin-right: 20px;
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+
+  .task-item {
+    width: 99%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-left: -8px;
+    border-radius: 15px;
+    padding: 5px 15px;
+  }
+
+  .task-item:nth-child(even) {
+    height: 60px;
+  }
+
+  .task-title input::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    background-color: rgba(161, 169, 241, 0.5);
+  }
+
+  .addtask-modal {
+    margin: 10% 20px;
+    background-color: rgb(255, 240, 181);
+    border-radius: 20px;
+    overflow: hidden;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  ...;
-}
+  .note {
+    top: 00px;
+    left: -170px;
+  }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  ...;
+  .time {
+    top: 20px;
+    right: 100px;
+    margin-left: 0px;
+  }
+
+  .task-title {
+    width: 400px;
+  }
+  .delete {
+    top: 20px;
+  }
+
+  .addtask-modal {
+    margin: 10% 20px;
+    background-color: rgb(255, 240, 181);
+    border-radius: 20px;
+    overflow: hidden;
+  }
 }

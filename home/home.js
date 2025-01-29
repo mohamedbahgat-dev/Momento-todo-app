@@ -137,7 +137,28 @@ listContainer.addEventListener('change' ,function(e){
     }  
 })
 
+// // create event to show hamburger menu in mobile design
+const menuIcon = document.querySelector('.menu-icon')
+const hamburgerMenu = document.querySelector('.hamburger-menu')
+const pageMain  = document.querySelector('main')
+menuIcon.addEventListener('click', function(e){
+    hamburgerMenu.style.display = 'flex'
+    menuIcon.style.rotate = '90deg'
+        
+})
 
+pageMain.addEventListener('click', function(e){
+    e.stopPropagation()
+    hamburgerMenu.style.display = 'none'  
+    menuIcon.style.rotate = '180deg'  
+})
+
+const menuClose = document.querySelector('.menu-close')
+menuClose.addEventListener('click', function(){
+    hamburgerMenu.style.display = 'none'
+    menuIcon.style.rotate = '180deg'
+   
+})
 
 // digital clock
 function updateClock(){
@@ -164,75 +185,9 @@ setInterval(updateClock , 1000)
 
 // change color of active page link
 const currentLink = window.location.href
-const pagesLinks = document.querySelectorAll('.pages a')
+const pagesLinks = document.querySelectorAll('.navbar ul li a')
 for(link of pagesLinks) {
     if(link.href === currentLink){
         link.style.color = 'red'
     }
 }
-
-// // create a new tasks list 
-// const newList = document.getElementById('newlist-btn') 
-// newList.addEventListener('click', function(){
-
-//     // create newtasks main container
-//     const taskContainer = document.createElement('div')
-//     taskContainer.classList.add('tasks-container')
-
-//     // create task container headers 
-//     const containerHeaders = document.createElement('div')
-//     containerHeaders.classList.add('task-container-headers')
-//     taskContainer.appendChild(containerHeaders)
-
-//     // header name and add task button
-//     const headerName = document.createElement('h3')
-//     headerName.textContent = 'Daily Tasks 2'
-//     containerHeaders.appendChild(headerName)
-
-//     // create svg and its path elements
-//     const addTasksBtn = document.createElementNS("http://www.w3.org/2000/svg",'svg')
-//     const btnPath = document.createElementNS("http://www.w3.org/2000/svg",'path')
-//     addTasksBtn.appendChild(btnPath)
-//     containerHeaders.appendChild(addTasksBtn)
-    
-//     addTasksBtn.classList.add('add-tasks')
-   
-//     // adding attributes to svg and path elements
-//     addTasksBtn.setAttribute( "viewBox", "0 0 24 24")
-//     addTasksBtn.setAttribute( 'fill', 'currentColor')
-//     btnPath.setAttribute('fill-rule', "evenodd")
-//     btnPath.setAttribute('d', "M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z")
-//     btnPath.setAttribute('clip-rule', "evenodd")
-    
-
-//     // creating add task modal elements
-//     const modalContainer = document.createElement('div')
-//     const addTaskModal = document.createElement('div')
-//     modalContainer.classList.add('modal-container')
-//     addTaskModal.classList.add('addtask-modal')
-
-//     modalContainer.appendChild(addTaskModal)
-
-//       //add modal header
-//     const modalHeader = document.createElement('div')
-//     const modalTitle =  document.createElement('h2')
-//     const modalCloseBtn = document.createElement('span')
-//     modalHeader.classList.add('modal-header')
-//     modalCloseBtn.classList.add('close')
-//     modalTitle.textContent = 'Enter your task details'
-//     modalCloseBtn.textContent = '&times;'
-
-//     addTaskModal.appendChild(modalHeader)
-//     modalHeader.appendChild(modalTitle)
-//     modalHeader.appendChild(modalCloseBtn)
-
-//     //
-
-
-
-//     // add new list to that tasks container 
-//     const dailyTasks = document.querySelector('.daily-tasks')
-//     dailyTasks.appendChild(taskContainer)
-    
-// })
-
