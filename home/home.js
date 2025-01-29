@@ -46,6 +46,7 @@ const CreateTaskElement = (title, taskTime, taskNote )=> {
     note.textContent = taskNote
     note.classList.add('note')
     taskItem.appendChild(note)
+
     
     // create delete btn child element, add delete value and class name
     let deleteBtn = document.createElement('span')
@@ -126,7 +127,7 @@ listContainer.addEventListener('click', function(e){
 
 // toggle task as completed if user checked it 
 listContainer.addEventListener('change' ,function(e){
-    if(e.target.className == 'task-check'){
+    if(e.target.className === 'task-check'){
         const task = e.target.nextElementSibling
         if (e.target.checked){
             task.style.textDecoration = 'line-through'
@@ -135,6 +136,7 @@ listContainer.addEventListener('change' ,function(e){
         }        
     }  
 })
+
 
 
 // digital clock

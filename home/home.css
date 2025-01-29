@@ -203,9 +203,13 @@
 
 .note {
   width: 300px;
-
   text-align: center;
   line-height: 1.5;
+}
+
+.note-bubble {
+  display: none;
+  width: 30px;
 }
 
 .delete {
@@ -222,7 +226,7 @@
 
 .task-item:nth-child(even) {
   background-color: #fffef1;
-  height: 60px;
+  height: auto;
 }
 
 .new-list {
@@ -352,4 +356,172 @@
   cursor: pointer;
 }
 
-/* styling weekly tasks */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .pages {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar {
+    display: flex;
+    background-color: rgba(162, 170, 241, 0.7);
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    height: 150px;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .user-icon {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #person-icon {
+    width: 80px;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  #greeting-msg {
+    display: none;
+  }
+
+  .page-header {
+    justify-content: end;
+    margin-top: 10px;
+  }
+
+  .container-title {
+    margin-left: 40%;
+  }
+
+  .clock {
+    margin-right: -25px;
+  }
+
+  .tasks-headers {
+    display: none;
+  }
+
+  .task-item {
+    margin-top: 20px;
+    width: 96%;
+    flex-wrap: wrap;
+    gap: 0px;
+    position: relative;
+  }
+
+  .task-title {
+    width: 250px;
+    margin-left: 0px;
+  }
+
+  .delete {
+    position: absolute;
+    top: 3px;
+    right: -15px;
+  }
+
+  .time {
+    align-self: first baseline;
+    width: fit-content;
+    position: absolute;
+    top: 3px;
+    right: 110px;
+  }
+
+  .note {
+    width: 230px;
+    position: relative;
+    text-align: start;
+    top: 0;
+    left: 25px;
+    color: red;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .user-icon {
+    display: none;
+  }
+
+  #logo {
+    margin-left: 10px;
+  }
+
+  .pages {
+    margin-right: 10px;
+  }
+
+  .clock {
+    margin-right: -25px;
+  }
+
+  .container-title {
+    margin-left: 40%;
+  }
+
+  .tasks-headers {
+    display: none;
+  }
+
+  .task-item {
+    margin-top: 20px;
+    width: 96%;
+    flex-wrap: wrap;
+    gap: 0px;
+    position: relative;
+  }
+
+  .task-title {
+    width: 250px;
+    margin-left: 0px;
+  }
+
+  .delete {
+    position: absolute;
+    top: 3px;
+    right: -15px;
+  }
+
+  .time {
+    align-self: first baseline;
+    width: fit-content;
+    position: absolute;
+    top: 3px;
+    right: 110px;
+  }
+
+  .note {
+    text-align: start;
+    width: 300px;
+    margin-left: 25px;
+    color: red;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  ...;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  ...;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  ...;
+}
