@@ -110,7 +110,7 @@ submitTask.addEventListener('submit', function(e){
     const weekday = document.getElementById('weekday').value.toUpperCase()
     const date = document.getElementById('date').innerText
     const noteInput = document.getElementById('note').value
-    const taskTime = weekday + date
+    const taskTime = `${weekday} - ${date}`
 
     // create task element
     CreateTaskElement(taskInput, taskTime, noteInput)
